@@ -85,8 +85,14 @@ export class App extends Component {
         boxShadow="  20px 20px 60px #cacaca,
              -20px -20px 60px #f6f6f6"
       >
-        <Box as="h1" display="flex" justifyContent="center" color="#333333">
-          Phonebook
+        <Box
+          as="h1"
+          display="flex"
+          justifyContent="center"
+          color="#333333"
+          fontFamily="Merriweather"
+        >
+          PhoneBook
         </Box>
         <ContactForm onSubmit={this.addContact} />
         <Box
@@ -98,7 +104,14 @@ export class App extends Component {
           mx="auto"
           my="40"
         />
-        <Box as="h2" my={40} display="flex" justifyContent="center">
+        <Box
+          as="h2"
+          my={40}
+          display="flex"
+          color="#333333"
+          fontFamily="Merriweather"
+          justifyContent="center"
+        >
           Contacts
         </Box>
         <FilterContacts

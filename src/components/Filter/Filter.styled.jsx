@@ -2,17 +2,17 @@ import styled from '@emotion/styled';
 
 export const Label = styled.label`
   position: relative;
-  font-size: 16px;
-  margin-left: 20px;
+  font-size: ${p => p.theme.fontSizes.m};
+  margin-left: 5px;
 `;
 export const Input = styled.input`
   width: 330px;
   margin-bottom: 12px;
   margin-top: 3px;
-  font-size: 15px;
+  font-size: ${p => p.theme.fontSizes.m};
   padding-left: 5px;
   height: 35px;
-  border-radius: 7px;
+  border-radius: ${p => p.theme.radii.preMedium};
   border: none;
 `;
 
