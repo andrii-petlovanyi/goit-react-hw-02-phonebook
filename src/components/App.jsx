@@ -7,7 +7,7 @@ import {
   ListItemApp,
   ListItemText,
   BtnDel,
-} from './ContactsList/ConctactsList.styled';
+} from './ContactListItem/ContactListItem.styled';
 
 export class App extends Component {
   state = {
@@ -38,7 +38,6 @@ export class App extends Component {
     this.setState(prevState => ({
       contacts: [...newArray],
     }));
-    console.log(newArray);
   };
 
   onChange = event => {

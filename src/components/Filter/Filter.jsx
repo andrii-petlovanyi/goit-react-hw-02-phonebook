@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { List, Label, Input } from './Filter.styled';
 import { Box } from '../Box';
 
@@ -25,4 +26,10 @@ export const FilterContacts = ({ onChange, value, onFilter }) => {
       {value && <List>{onFilter()}</List>}
     </Box>
   );
+};
+
+FilterContacts.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  onFilter: PropTypes.func.isRequired,
 };

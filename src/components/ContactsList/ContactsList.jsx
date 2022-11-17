@@ -1,20 +1,6 @@
-import { List, ListItem, ListItemText, BtnDel } from './ConctactsList.styled';
-
-export const ContactListItem = ({ contact, onDelete }) => {
-  return (
-    <ListItem id={contact.id}>
-      <ListItemText>
-        <b>{contact.name}</b> : {contact.number}
-      </ListItemText>
-      <BtnDel
-        type="button"
-        onClick={() => {
-          onDelete(contact.id);
-        }}
-      ></BtnDel>
-    </ListItem>
-  );
-};
+import { List } from './ConctactsList.styled';
+import PropTypes from 'prop-types';
+import { ContactListItem } from 'components/ContactListItem/ContactListItem';
 
 export const ContactList = ({ contacts, filter, onDelete }) => {
   if (filter !== '') {
@@ -32,4 +18,10 @@ export const ContactList = ({ contacts, filter, onDelete }) => {
       ))}
     </List>
   );
+};
+
+ContactList.propTypes = {
+  contacts: PropTypes.array.isRequired,
+  filter: PropTypes.string.isRequired,
+  onDelete: PropTypes.func.isRequired,
 };
