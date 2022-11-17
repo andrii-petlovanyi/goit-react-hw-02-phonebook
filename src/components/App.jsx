@@ -38,6 +38,7 @@ export class App extends Component {
     this.setState(prevState => ({
       contacts: [...newArray],
     }));
+    console.log(newArray);
   };
 
   onChange = event => {

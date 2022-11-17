@@ -7,7 +7,7 @@ export class ContactForm extends Component {
     name: '',
     number: '',
   };
-  userId = nanoid();
+  // userId = nanoid();
 
   onChange = event => {
     const { name, value } = event.currentTarget;
@@ -26,7 +26,7 @@ export class ContactForm extends Component {
     const contact = {
       name: this.state.name,
       number: this.state.number,
-      id: this.userId,
+      id: nanoid(),
     };
     console.log(contact);
     this.props.onSubmit(contact);
