@@ -3,6 +3,7 @@ import { Box } from './Box';
 import { ContactForm } from './ContactsForm/ContactsForm';
 import { FilterContacts } from './Filter/Filter';
 import { ContactList } from './ContactsList/ContactsList';
+import { theme } from './Theme';
 import {
   ListItemApp,
   ListItemText,
@@ -81,16 +82,15 @@ export class App extends Component {
         mt="20px"
         p="20px"
         borderRadius="20px"
-        backgroundColor="#CFC7C0"
-        boxShadow="  20px 20px 60px #cacaca,
-             -20px -20px 60px #f6f6f6"
+        backgroundColor={theme.colors.mainBackground}
+        boxShadow={theme.shadows.custom}
       >
         <Box
           as="h1"
           display="flex"
           justifyContent="center"
-          color="#333333"
-          fontFamily="Merriweather"
+          color={theme.colors.text}
+          fontFamily={theme.fonts.title}
         >
           PhoneBook
         </Box>
@@ -99,7 +99,7 @@ export class App extends Component {
           as="span"
           width={330}
           height={3}
-          backgroundColor="#514438"
+          backgroundColor={theme.colors.text}
           display="flex"
           mx="auto"
           my="40"
@@ -108,8 +108,8 @@ export class App extends Component {
           as="h2"
           my={40}
           display="flex"
-          color="#333333"
-          fontFamily="Merriweather"
+          color={theme.colors.text}
+          fontFamily={theme.fonts.title}
           justifyContent="center"
         >
           Contacts
